@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockCDBaby</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">BlockCDBaby</h1>
+        <hr>
+        <p style="text-align: center;">Track song development, and verifiably split revenue.</p>
+    </div>
+
+    <div id="ftc-harvest">
+        <h2>Song Overview</h2>
+        <div class="form-group">
+            SKU
+            <br>
+            <input class="input-field" type="number" id="sku" name="sku" value=1><br>
+            UPC
+            <br>
+            <input type="number" id="upc" name="upc" value=1><br>
+            Current Owner ID
+            <br>
+            <input type="text" id="ownerID" name="ownerID" value="" size="50"><br>
+            <div class=button-div>
+                <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Data 1</button>
+                <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Data 2</button>
+            </div>
+        </div>
+        <div class=form-break></div>
+        <h2>Musician Details</h2>
+        <div class="form-group">
+            Musician ID
+            <br>
+            <input type="text" id="originMusicianID" name="originMusicianID" value="0x27D8D15CbC94527cAdf5eC14B69519aE23288B95"
+                size="50"><br>
+            Musician Name
+            <br>
+            <input type="text" id="originMusicianName" name="originMusicianName" value="Christian Le Doux"><br>
+            Musician Information
+            <br>
+            <input type="text" id="originMusicianInformation" name="originMusicianInformation" value="Located in the sunny North Pole Region"><br>
+            Song Notes
+            <br>
+            <input type="text" id="songNotes" name="songNotes" value="Name: The North's Pole is so much longer than the South's" size="60"><br>
+            Producer Shares
+            <br>
+            <input type="number" id="producerShares" name="producerShares" value=70><br>
+            <button class="btn-writeMelody" id="button" type="button" data-id="1">Write Melody</button>
+            <button class="btn-writeLyrics" id="button" type="button" data-id="2">Write Lyrics</button>
+            <button class="btn-playTracks" id="button" type="button" data-id="3">Play Tracks</button>
+            <button class="btn-approveTracks" id="button" type="button" data-id="5">Approve Tracks</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Producer Details</h2>
+        <div class="form-group">
+            Producer ID
+            <br>
+            <input type="text" id="producerID" name="producerID" value="0x27D8D15CbC94527cAdf5eC14B69519aE23288B95"
+                size="50">
+            <br>
+            Song Price
+            <br>
+            <input type="number" id="songPrice" name="songPrice" value=1>ETH<br>
+            Distributor Shares
+            <br>
+            <input type="text" id="distributorShares" name="distributorShares" value=40><br>
+            <button class="btn-recordTracks" id="button" type="button" data-id="4">Record Tracks</button>
+            <button class="btn-releaseSong" id="button" type="button" data-id="6">Release Song</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Distributor Details</h2>
+        <div class="form-group">
+            Distributor ID
+            <br>
+            <input type="text" id="distributorID" name="distributorID" value="0x27D8D15CbC94527cAdf5eC14B69519aE23288B95"
+                size="50"><br>
+            <br>
+            <button class="btn-receive" id="button" type="button" data-id="7">Receive Song</button>
+        </div>
+        <div class=form-break></div>
+        <h2>Listener Details</h2>
+        <div class="form-group">
+            Listener ID
+            <br>
+            <input type="text" id="listenerID" name="listenerID" value="0x27D8D15CbC94527cAdf5eC14B69519aE23288B95"
+                size="50"><br>
+            <br>
+            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase Song</button>
+        </div>
+        <div class=form-break></div>
+        <hr>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="js/web3.min.js"></script> -->
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
